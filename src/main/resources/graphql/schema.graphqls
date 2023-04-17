@@ -46,7 +46,7 @@ type Product {
 type Order {
     id: ID!
     customer: Customer,
-    salesperson: SalesPerson,
+    salesPerson: SalesPerson,
     orderLines: [OrderLine]!
 }
 
@@ -59,6 +59,7 @@ type OrderLine {
 
 
 type Query {
+
     customers: [Customer]!
     customerById(id: ID): Customer
     customerByEmail(email: String): Customer
@@ -66,6 +67,15 @@ type Query {
     salesPeople: [SalesPerson]!
     salesPersonById(id: ID): SalesPerson
     salesPersonByEmail(email: String): SalesPerson
+
+    products: [Product]!
+    productById(id: ID): Product
+
+    orders: [Order]!
+    orderById(id: ID): Order
+
+    orderLine: [OrderLine]!
+    orderLineById(id: ID): OrderLine
 }
 
 type Mutation {
