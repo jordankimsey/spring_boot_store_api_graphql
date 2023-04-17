@@ -1,7 +1,7 @@
 package com.jordan.hplus.data;
 
 import jakarta.persistence.*;
-
+//hello test
 @Entity
 @Table(name = "CUSTOMERS")
 public class Customer {
